@@ -1,0 +1,47 @@
+@media (max-width:576px){
+	.banner-info{
+		text-align:center;
+	}
+	.banner-info h1{
+		font-size:28px;
+		line-height:34px;
+	}
+	.banner-info p{
+		font-size:18px;
+		line-height:22px;
+	}
+	.abt-sec{
+		text-align:center;
+	}
+	.abt-tab .nav-item .nav-link{
+		margin:0 0;
+	}
+	.footer-sec{
+		padding:0 0;
+	}
+	.flast-content{
+		text-align:center;
+		line-height:0;
+	}
+	.footer-content{
+		display:flex;
+		justify-content:center;
+		text-align:center;
+	}
+}
+@media (max-width:768px){
+	.banner-info{
+		text-align:center;
+	}
+	.banner-info h1{
+		font-size:28px;
+		line-height:34px;
+	}
+	.banner-info p{
+		font-size:18px;
+		line-height:22px;
+	}
+	.abt-sec{
+		text-align:center;
+	}
+}
