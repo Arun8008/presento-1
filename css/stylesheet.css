@@ -3,6 +3,13 @@
 	--sec-color:#111;
 }
 /*------head------*/
+.head-sec{
+	position:fixed;
+	width:100%;
+	background-color:#fff;
+	box-shadow: 0 0 8px #ddd;
+	z-index:3;
+}
 .present{
 	color:var(--sec-color);
 	font-size:30px;
@@ -85,9 +92,13 @@
 /*------logo------*/
 .logo-sec{
 	background-color:#fff;
+	min-height:100px;
 }
 .logo-info{ 
 padding:10px 35px;
+}
+.carousel-item{
+	min-height:120px;
 }
 .logo-info img{
 	width:100%;
@@ -99,19 +110,18 @@ padding:10px 35px;
 	filter:grayscale(0);
 	opacity:1;
 }
-.circle{ text-align:center;
-         padding-top:20px;
-}
-.circle span{ display:inline-block;
+
+.logo-sec .carousel .carousel-indicators button{ 
+  display:inline-block;
   width:12px;
   height:12px;
   border-radius:50%;
   border:solid 1px var(--pri-color);
-  opacity:0.8;
-  margin:0 2px;
+  margin:0 4px;
   cursor:pointer;
+  transform:translateY(50px);
 }
-.circle span.active{
+.logo-sec .carousel .carousel-indicators button.active{
 	background-color:var(--pri-color);
 }
 /*------About------*/
@@ -196,7 +206,8 @@ padding:10px 35px;
 	position: absolute;
     width: 52px;
     height: 52px;
-    left: 128px;
+    left: 50%;
+    transform: translateX(-50%);
     top: -26px;
     border-radius: 50%;
     background-color: white;
@@ -219,7 +230,8 @@ margin-bottom:10px;
 	font-size:15px;
 	font-family: 'Raleway', sans-serif;
 	color:#444444;
-}*------tabs------*/
+}
+/*------tabs------*/
 .abt-tab{
 	border:none !important;
 }
@@ -231,11 +243,14 @@ margin-bottom:10px;
 	border:solid 1px #ccc;
 	margin:0 15px;
 	color:#000;
-	font-size:20px;
+	font-size:18px;
+	font-weight:600;
+	font-family: "Raleway", sans-serif;
 	display:flex;
-	justify-content:flex-start;
-	align-items:flex-start;
+	justify-content:center;
+	align-items:center;
 	padding:30px 15px;
+	min-height:100px;
 }
 .abt-tab .nav-item:first-child .nav-link{
 	margin-left:0;
@@ -247,7 +262,7 @@ margin-bottom:10px;
 	line-height:20px;
 }
 .abt-tab .nav-item .nav-link i{
-	margin-right:15px;
+	margin:0 10px;
 	font-size:35px;
 }
 .abt-tab .nav-item .nav-link:hover{
@@ -259,12 +274,38 @@ margin-bottom:10px;
 	color:#fff;
 	border-color:#dc3545;
 }
-.abt-content h2{
+.about-content h2{
 	font-size:26px;
 	color:#444444;
 	font-weight: 600;
+	line-height:28px;
 	font-family: "Raleway", sans-serif;
-	margin-bottom:10px;
+	margin:15px 0;
+}
+.tab-italic{
+	font-family: "Open Sans", sans-serif;
+    color: #444444;
+	font-style:italic;
+	margin:20px 0;
+	font-size:16px;
+}
+.about-content i{
+	font-size:16px;
+	margin-right:10px;
+	color:var(--pri-color);
+}
+.about-content ul li{
+	font-size:16px;
+	color: #444444;
+	padding-bottom:15px;
+	line-height:22px;
+}
+.about-content .tab-text{
+	font-size:18px;
+	font-family: "Open Sans", sans-serif;
+    color: #444444;
+	line-height:26px;
+	margin:20px 0;
 }
 /*------service------*/
 .service-sec{
@@ -482,13 +523,26 @@ margin-right:10px;
 	margin-bottom:10px;
 	color:#444444;
 	font-style:italic;
-	line-height:22px;
+	line-height:26px;
 	margin:20px auto 15px auto; 
 }
 .testimonials-content i{
-	font-size:26px;
-	color:var(--pri-color);
+	font-size:20px;
+	color:#e03a3c85;
 	margin:0 10px;
+}
+.testimonials-sec .carousel .carousel-indicators button{ 
+  display:inline-block;
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  border:solid 1px var(--pri-color);
+  margin:0 4px;
+  cursor:pointer;
+  transform:translateY(50px);
+}
+.testimonials-sec .carousel .carousel-indicators button.active{
+	background-color:var(--pri-color);
 }
 /*------Pricing------*/
 .pricing-sec{
@@ -519,10 +573,10 @@ margin-right:10px;
 	background-color:var(--pri-color);
 }
 .pricing-content h3{ 
-font-size:26px;
-color:#fff;
-padding:20px;
-font-weight:500;
+    font-size: 28px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 40px;
 }
 .pricing-content h5{ 
 font-size:16px;
@@ -559,36 +613,26 @@ padding:15px 0;
 	color:#fff;
  }
 /*------Faq------*/
-.faq-content{
-	border-bottom:solid 1px #eee;
+.faq-sec .accordion-button:not(.collapsed) {
+    color:var(--pri-color);
+    background-color:#fff;
+    box-shadow:none;
 }
-.faq-content a{
-	font-size:18px;
-	color: #343a40;
+.faq-sec h2 button{
+	transition:all .3s ease;
+	font-size:20px;
+	padding:20px 0;
 }
-.faq-head{
-	text-decoration:none;
-	color:#343a40;
+.faq-sec .accordion-body{
+	line-height:30px;
+	padding:0 0 10px 0;
 }
-.faq-head:hover{
-    border:none;
+.faq-sec h2 button:hover{
 	color:var(--pri-color);
-	background-color:transparent;
 }
-.accordion-button:focus{
-	border-color:none;
-	box-shadow:none;
-}
-.accordion-button:focus a{
-	color:red;
-}
-.accordion-body{
-	font-size:15px;
-	color:#212529;
-	line-height:22px;
-}
-.accordion-button:not(.collapsed){
-	color:var(--pri-color);
+.accordion-button:focus {
+    border-color:none;
+    box-shadow:none;
 }
 /*------team------*/
 .team-sec{
@@ -646,6 +690,9 @@ background-color:var(--pri-color);
 	
 }
 /*------contact------*/
+.contact-sec{
+	background-color:#fff;
+}
 .contact-info{
 	background-color:#e03a3c;
 	height:120px;
@@ -739,7 +786,8 @@ padding:10px 0;
 font-weight:600;
 }
 
-.footer-top-content li{ padding:5px 0;
+.footer-top-content li{ 
+padding:5px 0;
 }
 .footer-top-content i{ font-size:14px;
 color:#fff;
@@ -788,7 +836,7 @@ margin-left:10px;
     font-weight: 600;
     font-family: 'Raleway', sans-serif;
 	color:#fff;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     position: relative;
 }
 .foot-bar h4:after{
@@ -807,7 +855,42 @@ margin-left:10px;
 .footer-sec{
 	background-color:#000;
 }
-.footer-content{
-	background-color:#e03a3c;
-	height:50px;
+.flast-content{
+margin:10px;
+}
+.flast-content p{ 
+font-size:16px;
+color:#fff;
+line-height:22px;
+font-family:'Raleway', sans-serif;
+}
+.flast-content span{font-weight:600;
+}
+.flast-content a{ 
+text-decoration:none;
+color:var(--pri-color);
+}
+.flast-content:hover a{
+	color:#ccc;
+}
+.footer-content{ display:flex;
+justify-content:flex-end;
+margin:10px;
+}
+.twitter{  background-color: var(--sec-color);
+    color: white;
+    font-size: 20px;
+    border-radius: 8px;
+    padding: 8px 0px;
+    text-align: center;
+    margin: 0 5px;
+    width: 36px;
+    height: 36px;
+}
+.footer-content a:hover{background-color:var(--pri-color);
+color:#fff;
+}
+.twitter:hover{ 
+background-color:var(--sec-color);
+
 }
