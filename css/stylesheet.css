@@ -15,6 +15,9 @@
 	font-size:30px;
 	font-weight:600;
 }
+ a:hover{
+    color:var(--sec-color);
+}
 .nav-dot span{
 	color:var(--pri-color);
 	
@@ -30,6 +33,9 @@
 	color:var(--pri-color);
 }
 .present-nav a:hover{
+	color:var(--pri-color);
+}
+.drop-down a.dropdown-sec:hover{
 	color:var(--pri-color);
 }
 .dropdown-sec a{
@@ -871,7 +877,7 @@ text-decoration:none;
 color:var(--pri-color);
 }
 .flast-content:hover a{
-	color:#ccc;
+	color:#e76668;
 }
 .footer-content{ display:flex;
 justify-content:flex-end;
