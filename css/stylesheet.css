@@ -769,7 +769,7 @@ background-color:var(--pri-color);
 }
 /*-----footer-top-------*/
 .footer-top-sec{
-	background-color:var(--sec-color);
+	background-color:#1b1b1b;
 }
 .footer-top-content{
 	padding:20px 0;
@@ -861,7 +861,7 @@ margin-left:10px;
 }
 /*-----footer-top-------*/
 .footer-sec{
-	background-color:#000;
+	background-color:var(--sec-color);
 }
 .flast-content{
 margin:10px;
