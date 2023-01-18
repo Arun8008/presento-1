@@ -677,8 +677,8 @@ margin:0 15px;
 right:25px;
 opacity:0;
 padding:10px;
-	transition: all 0.3s ease;
-	transform:translateY(-20px);
+transition: all 0.3s ease;
+transform:translateY(-20px);
 }
 .team-icon i{
 padding:8px 0;
@@ -692,10 +692,10 @@ background-color:var(--pri-color);
 }
 .team-content:hover .team-icon{
 	opacity:1;
+	transform:translateY(0);
 }
 .team-icon i:hover{
-	background-color:var(--sec-color);
-	
+	background-color:var(--sec-color);	
 }
 /*------contact------*/
 .contact-sec{
